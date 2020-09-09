@@ -6,7 +6,8 @@ Firstname="^[A-Z]+[a-z]*$"
 Lastname="^[A-Z]+[a-z]*$"
 email="^[a-z]+[0-9]*([._-+][0-9a-z]+)*@[0-9a-z]+[.][a-z]{2,4}([.][a-z]{2})*$"
 phno="^([91])+ ([0-9]{10})*$"
-pwd="((([A-Z]{1,})+([a-zA-z0-9])){8,})*$"
+#pwd="((([A-Z]{1,})([0-9]{1,})([a-z])){8,})*$"
+#pwd="^[[:alnum:]][[:punct:]]"
 #user input
 read -p "Enter First Name: " enter_Firstname
 read -p "Enter First Name: " enter_Lastname
@@ -38,10 +39,9 @@ then
 else
         echo Invalid Mobile Number
 fi
-if [[ $enter_pwd =~ $pwd ]]
+if [[ $enter_pwd =~ [[:alnum:]] && $enter_pwd =~ [[:upper:]] && $enter_pwd =~ [[:lower:]] && $enter_pwd =~ [[:punct:]] && $enter_pwd =~ [[:digit:]] && ${#enter_pwd} -ge 8 ]]
 then
         echo "Password Saved"
 else
         echo Invalid Password
 fi
-
