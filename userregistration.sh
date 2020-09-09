@@ -5,10 +5,12 @@ echo "     USER REGISTRATION SYSTEM     "
 Firstname="^[A-Z]+[a-z]*$"
 Lastname="^[A-Z]+[a-z]*$"
 email="^[a-z]+[0-9]*([._-+][0-9a-z]+)*@[0-9a-z]+[.][a-z]{2,4}([.][a-z]{2})*$"
+phno="^([91])+ ([0-9]{10})*$"
 #user input
 read -p "Enter First Name: " enter_Firstname
 read -p "Enter First Name: " enter_Lastname
 read -p "Enter EMAIL ID: " enter_email
+read -p "Enter Mobile Number: " enter_phno
 #Validation Check
 if [[ $enter_Firstname =~ $Firstname ]]
 then
@@ -27,4 +29,10 @@ then
         echo "Email Id: $enter_email"
 else
         echo Invalid Email Id
+fi
+if [[ $enter_phno =~ $phno ]]
+then
+        echo "Mobile Number: $enter_phno"
+else
+        echo Invalid Mobile Number
 fi
