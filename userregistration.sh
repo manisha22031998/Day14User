@@ -4,7 +4,7 @@ echo "     USER REGISTRATION SYSTEM     "
 #patterns
 Firstname="^[A-Z]+[a-z]*$"
 Lastname="^[A-Z]+[a-z]*$"
-email="^[a-z]+[0-9]*([._-+][0-9a-z]+)*@[0-9a-z]+[.][a-z]{2,4}([.][a-z]{2})*$"
+email="^[a-z]+[0-9]*([_.+-][0-9a-z]+)*@[0-9a-z]+[.][a-z]{2,4}([.][a-z]{2})*$"
 phno="^([91])+ ([0-9]{10})*$"
 #user input
 read -p "Enter First Name: " enter_Firstname
