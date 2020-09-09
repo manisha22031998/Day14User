@@ -6,8 +6,6 @@ Firstname="^[A-Z]+[a-z]*$"
 Lastname="^[A-Z]+[a-z]*$"
 email="^[a-z]+[0-9]*([._-+][0-9a-z]+)*@[0-9a-z]+[.][a-z]{2,4}([.][a-z]{2})*$"
 phno="^([91])+ ([0-9]{10})*$"
-#pwd="((([A-Z]{1,})([0-9]{1,})([a-z])){8,})*$"
-#pwd="^[[:alnum:]][[:punct:]]"
 #user input
 read -p "Enter First Name: " enter_Firstname
 read -p "Enter First Name: " enter_Lastname
@@ -45,3 +43,4 @@ then
 else
         echo Invalid Password
 fi
+echo "   -- DONE --    "
