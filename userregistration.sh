@@ -6,11 +6,13 @@ Firstname="^[A-Z]+[a-z]*$"
 Lastname="^[A-Z]+[a-z]*$"
 email="^[a-z]+[0-9]*([._-+][0-9a-z]+)*@[0-9a-z]+[.][a-z]{2,4}([.][a-z]{2})*$"
 phno="^([91])+ ([0-9]{10})*$"
+pwd="^([a-zA-z0-9]{8,})*$"
 #user input
 read -p "Enter First Name: " enter_Firstname
 read -p "Enter First Name: " enter_Lastname
 read -p "Enter EMAIL ID: " enter_email
 read -p "Enter Mobile Number: " enter_phno
+read -p "Enter PASSWORD: " enter_pwd
 #Validation Check
 if [[ $enter_Firstname =~ $Firstname ]]
 then
@@ -36,3 +38,10 @@ then
 else
         echo Invalid Mobile Number
 fi
+if [[ $enter_pwd =~ $pwd ]]
+then
+        echo "Password Saved"
+else
+        echo Invalid Password
+fi
+
